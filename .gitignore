@@ -1,0 +1,7 @@
+.idea/
+.vscode/
+.venv/
+new/
+__pycache__/
+*.pyc
+tempCodeRunnerFile.py
