@@ -10,3 +10,6 @@ class Solution:
                     nums1[j], nums1[i] = nums1[i], nums1[j]
 
         # return kuch nahi karna - in-place modify karna hai
+        
+
+s=Solution()
