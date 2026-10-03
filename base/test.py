@@ -1,14 +1,30 @@
-# nums = [1,2,3,1]
-nums  = [1,1,1,3,3,4,3,2,4,2]
+pattern = "abba"
+s = "dog cat cat fish"
+pattern = "abba"
+s = "dog cat cat dog"
+# new = s.split(" ")
+# result = {}
 
-seen =[]
-for i in nums:
-    if i not in seen:
-        seen.append(i)
-    else:
-        print("duplicate found")
-        break
+class Solution:
+    def wordPattern(self, pattern: str, s: str) -> bool:
+        new = s.split(" ")
+        result = {}
+        print(new)
+
+        for i in range(len(pattern)):
+            if pattern[i] not in result.keys():
+                if new[i] in result.values():
+                    print("Failed")
+                    return False
+                result[pattern[i]] = new[i]
+            elif result.get(pattern[i]) != new[i]:
+                print("00000",result.get(pattern[i]))
+                print("False")
+                return False
+                    
+        print(result.get(pattern[i]), "lagse vaar pn aavse maja")    
+        print("True")
+        return True
         
-    
-
-print(seen)        
+Solution = Solution()
+Solution.wordPattern(pattern=pattern, s=s)

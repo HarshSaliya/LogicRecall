@@ -1,1 +1,2 @@
-self
+rd = list(rd)
+# print(rd)
