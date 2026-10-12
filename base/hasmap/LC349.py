@@ -1,9 +1,17 @@
 class Solution:
     def intersection(self, nums1: list[int], nums2: list[int]) -> list[int]:
-        result  = []
-        for i in nums2:
-            if i in nums1 and i not in result:
-                result.append(i)
+        # result  = []
+        # for i in nums2:
+        #     if i in nums1 and i not in result:
+        #         result.append(i)
 
         
-        return result
+        # return result
+        result =set()
+        nums1 = set(nums1)
+
+        for i in nums2:
+            if i not in result and i in nums1:
+                result.add(i)
+        
+        return list(result)
